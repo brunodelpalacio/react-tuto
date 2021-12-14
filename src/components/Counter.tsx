@@ -12,7 +12,7 @@ const Counter = () => {
     };
     return (
         <div>
-            <Button onClick={onDecreaseCount}>
+            <Button onClick={onDecreaseCount} disabled={count === 0}>
                 -
             </Button>
             <Typography>{count}</Typography>
