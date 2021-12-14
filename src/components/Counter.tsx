@@ -12,10 +12,14 @@ const Counter = () => {
     };
     return (
         <div>
-            <Button onClick={onDecreaseCount}>Decrease Count</Button>
-            <Typography>Current value: {count}</Typography>
-            <Button onClick={onIncrementCount}>Increment Count</Button>
-            <Counter />
+            <Button onClick={onDecreaseCount}>
+                -
+            </Button>
+            <Typography>{count}</Typography>
+            <Button onClick={onIncrementCount}>
+                +
+            </Button>
+
         </div>
     );
 };
