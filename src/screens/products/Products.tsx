@@ -19,7 +19,7 @@ const Products = () => {
     asyncCall();
   }, []);
 
-  console.log('result');
+  console.log(Products);
 
   return (
     <div>
