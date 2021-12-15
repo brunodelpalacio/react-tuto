@@ -13,11 +13,11 @@ const Counter = () => {
         setCount(count + 1);
     };
     return (
-        <div>
+        <div className={classes.container}>
             <Button className={classes.button} onClick={onDecreaseCount} disabled={count === 0}>
                 -
             </Button>
-            <Typography>{count}</Typography>
+            <Typography className={classes.texto}>{count}</Typography>
             <Button className={classes.button} onClick={onIncrementCount}>
                 +
             </Button>
