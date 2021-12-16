@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import { Typography, Button } from '@mui/material';
+import { Button } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import Counter from '../../components/Counter';
 import ProductsService from '../../services/ProducService';
 import { useState } from 'react';
 import useStyles from './products-styles';
+import ProductItem from '../../components/ProductItem';
 
 
 
@@ -28,7 +29,7 @@ const Products = () => {
     asyncCall();
   }, []);
 
-  console.log('Productos: ', products);
+  console.log(products);
 
   if (products.length === 0) {
     return <h1>Cargando...</h1>
@@ -36,7 +37,7 @@ const Products = () => {
 
   return (
     <div className={classes.container}>
-      <img src="https://www.hola.com/imagenes/cocina/recetas/20191015151658/burrito-pollo-verduras/0-733-361/burrito-pollo-m.jpg" alt="" />
+      <ProductItem />
       <Button onClick={onClickButton}>Ve a la página de detalles</Button>
       <Counter />
     </div>
